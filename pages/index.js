@@ -1,203 +1,91 @@
-import Head from 'next/head'
+import Layout from '../Components/Layout';
+import Link from 'next/link';
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+export default function() {
+  return (
+    <Layout>
+    <main className="gridContainer">
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
+      <div className="gridItem1">
+        <h1>Colin D'Amelio.</h1>
+        <h2>I am a <span>front-end developer, instructor, and team lead</span> based in Toronto.</h2>    
       </div>
-    </main>
 
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
+      <div className="gridItem2">
+        <p>Working as a full-time FED, I have contributed to a variety of enterprise <Link href="work"><a>projects</a></Link> throughout my career.</p>
+      </div>
 
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+      <div className="gridItem3">
+        <p>You can read some of the tech education publications I have written for Juno College both <a href="https://junocollege.com/blog/react-destructuring-techniques">here</a> and <a href="https://junocollege.com/blog/exploring-state-management-in-react">here</a>.</p>
+      </div>
 
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+      <div className="gridItem4">
+        <p>I encourage you to connect with me across <a href="https://github.com/colindamelio">GitHub</a>, <a href="https://twitter.com/clndml">Twitter</a>, or <a href="https://www.linkedin.com/in/colindamelio/">LinkedIn</a>.</p>
+      </div>
 
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
+      <style jsx>{`
+        .gridContainer {
+          display: grid;
+          grid-template-columns: repeat(11, 1fr);
+          grid-template-rows: repeat(2, 50vh);
+          grid-column-gap: 20px;
+          grid-row-gap: 0px;
         }
-      }
-    `}</style>
+          
+        .gridItem1 { 
+          grid-area: 1 / 2 / 2 / 7;
+          align-self: center;  
+        }
+        .gridItem2 { grid-area: 2 / 2 / 3 / 5; }
+        .gridItem3 { grid-area: 2 / 5 / 3 / 8; }
+        .gridItem4 { grid-area: 2 / 8 / 3 / 11; }
 
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
+        .gridItem2,
+        .gridItem3,
+        .gridItem4 {
+          margin-top: 50px;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
+        h1 {
+          font-weight: bold;
+          font-size: 40px;
+          margin: 0 0 10px;
+        }
 
-export default Home
+        h2 {
+          font-size: 20px;
+        }
+
+        span {
+          background-color: #f8f8f8;
+          background-image: linear-gradient(to right, #ffeb3b 0%, #fffef5 100%);
+        }
+        
+        p {
+          margin: 0;
+        }
+        
+        a {
+          color: #000;
+          text-decoration: underline;
+          text-decoration-color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+          .gridContainer {
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr;
+              margin: 25px;
+          }
+        
+          .gridItem1, .gridItem2, .gridItem3, .gridItem4 {
+            grid-column: auto;
+            grid-row: auto;
+          }
+        }
+
+      `}</style>
+    </main>
+    </Layout>
+  );
+}
