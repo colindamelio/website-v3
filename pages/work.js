@@ -43,6 +43,12 @@ export default function() {
             padding: 3px;
           }
 
+          @media screen and (max-width: 768px) {
+            section {
+              margin: 25px;
+            }
+          }
+
         `}</style>
       </section>
     </Layout>
