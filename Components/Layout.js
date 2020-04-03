@@ -1,6 +1,6 @@
 const Layout = props => {
   return (
-    <div>
+    <>
       {props.children}
 
       <style jsx global>{`
@@ -48,7 +48,7 @@ const Layout = props => {
         }
 
       `}</style>
-    </div>
+    </>
   )
 }
 

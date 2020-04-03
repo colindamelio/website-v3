@@ -47,6 +47,9 @@ export default function() {
             section {
               margin: 25px;
             }
+            a {
+              display: block;
+            }
           }
 
         `}</style>

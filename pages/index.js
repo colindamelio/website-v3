@@ -30,6 +30,8 @@ export default function() {
           grid-template-rows: repeat(2, 50vh);
           grid-column-gap: 20px;
           grid-row-gap: 0px;
+          max-width: 1400px;
+          margin: auto;
         }
           
         .gridItem1 { 
@@ -62,7 +64,7 @@ export default function() {
         }
         
         p {
-          margin: 0;
+          line-height: 1.5;
         }
         
         a {
