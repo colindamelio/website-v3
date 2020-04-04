@@ -46,18 +46,22 @@ export default function() {
               
             .gridItem1 { 
               grid-area: 1 / 2 / 2 / 7;
+              align-self: end;
             }
 
             .gridItem2 { 
               grid-area: 2 / 2 / 3 / 5;
+              align-self: center;
             }
 
             .gridItem3 { 
               grid-area: 2 / 5 / 3 / 8;
+              align-self: center;
             }
 
             .gridItem4 { 
               grid-area: 2 / 8 / 3 / 11; 
+              align-self: center;
             }
 
             .gridItem5 {
@@ -71,9 +75,6 @@ export default function() {
               margin-top: 50px;
             }
 
-            div:not(:last-of-type) {
-              align-self: center;
-            }
 
             h1 {
               font-weight: bold;
