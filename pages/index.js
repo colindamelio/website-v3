@@ -66,7 +66,7 @@ export default function() {
 
           span {
             background-color: #f8f8f8;
-            background-image: linear-gradient(to right, #ffeb3b 0%, #fffef5 100%);
+            background-image: linear-gradient(to right,#f5e9eb 0%,#fffef6 100%);
           }
           
           p {
