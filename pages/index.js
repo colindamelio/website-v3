@@ -107,6 +107,7 @@ export default function() {
                   grid-template-columns: 1fr;
                   grid-template-rows: 1fr;
                   margin: 25px;
+                  min-height: auto;
               }
             
               .gridItem1, .gridItem2, .gridItem3, .gridItem4, .gridItem5 {
