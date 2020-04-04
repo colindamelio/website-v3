@@ -61,6 +61,7 @@ export default function() {
 
           h2 {
             font-size: 20px;
+            font-weight: normal;
           }
 
           span {
