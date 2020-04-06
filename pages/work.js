@@ -38,7 +38,7 @@ export default function() {
           }
 
           a {
-            background-color: rgba(255, 235, 59, 0.7);
+            background-color: rgba(245, 233, 235, 0.7);
             color: #000;
             padding: 3px;
           }
