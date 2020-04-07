@@ -97,9 +97,26 @@ export default function() {
             }
             
             a {
+              display: inline-block;
               color: #000;
-              text-decoration: underline;
-              text-decoration-color: #000;
+              position: relative;
+              text-decoration: underline
+            }
+
+            a:hover:before {
+              height: 100%;
+              top: 0;
+            }
+
+            a:before {
+              position: absolute;
+              content: '';
+              top: 10px;
+              left: 0;
+              width: 100%;
+              height: 50%;
+              opacity: 0.3;
+              background-image: linear-gradient(to right,#f3e9eb 0%,#fffef6 100%)
             }
 
             @media screen and (max-width: 768px) {
