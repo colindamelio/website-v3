@@ -67,10 +67,10 @@ const index = () => {
           <motion.div variants={fadeIn} className="gridItem1">
             <h1>Colin D'Amelio.</h1>
             <h2>
-              I am a
+              I am a{' '}
               <Highlighter>
                 front-end developer, instructor, and team lead
-              </Highlighter>
+              </Highlighter>{' '}
               based in Toronto.
             </h2>
           </motion.div>
