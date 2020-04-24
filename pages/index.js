@@ -15,6 +15,13 @@ const GridContainer = styled.main`
   min-height: 100vh;
   max-width: 1400px;
   margin: auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 25px;
+    min-height: auto;
+  }
 `;
 
 const Highlighter = styled.span`

@@ -66,6 +66,7 @@ const Layout = (props) => {
         .gridItem5 {
           grid-area: 3 / 6 / auto / auto;
           align-self: end;
+          white-space: nowrap;
         }
 
         .gridItem2,
