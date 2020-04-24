@@ -1,34 +1,76 @@
-import Layout from '../Components/Layout';
+import { motion } from 'framer-motion';
 
-export default function() {
+const easing = [0.48, 0.15, 0.25, 0.96];
+
+const fadeInUp = {
+  initial: {
+    x: 40,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: easing,
+    },
+  },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export default function () {
   return (
-    <Layout>
+    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <section>
-        <h1>Work</h1>
-        <ul>
-          <li>
+        <motion.h1 variants={fadeInUp}>Work</motion.h1>
+        <motion.ul variants={stagger}>
+          <motion.li variants={fadeInUp}>
             <div>
-              <p><a href="https://www.honda.ca/buildyourhonda">Honda/Acura Build and Price</a> - Front-end Developer @ Climax Media</p>
+              <p>
+                <a href="https://www.honda.ca/buildyourhonda">
+                  Honda/Acura Build and Price
+                </a>{' '}
+                - Front-end Developer @ Climax Media
+              </p>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeInUp}>
             <div>
-              <p><a href="https://www.honda.ca/dealerlocator">Honda/Acura Dealer Locator</a> - Front-end Developer @ Climax Media</p>
+              <p>
+                <a href="https://www.honda.ca/dealerlocator">
+                  Honda/Acura Dealer Locator
+                </a>{' '}
+                - Front-end Developer @ Climax Media
+              </p>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeInUp}>
             <div>
-              <p><a href="https://www.acura.ca">Acura Homepage</a> - Front-end Developer @ Climax Media</p>
+              <p>
+                <a href="https://www.acura.ca">Acura Homepage</a> - Front-end
+                Developer @ Climax Media
+              </p>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeInUp}>
             <div>
-              <p><a href="https://www.saraswatibali.com">Saraswati Bali Retreats</a> - Personal project</p>
+              <p>
+                <a href="https://www.saraswatibali.com">
+                  Saraswati Bali Retreats
+                </a>{' '}
+                - Personal project
+              </p>
             </div>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
         <style jsx>{`
-        
           section {
             display: flex;
             justify-content: center;
@@ -51,9 +93,8 @@ export default function() {
               display: block;
             }
           }
-
         `}</style>
       </section>
-    </Layout>
-  )
+    </motion.div>
+  );
 }

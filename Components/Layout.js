@@ -1,16 +1,15 @@
-const Layout = props => {
+const Layout = (props) => {
   return (
     <>
       {props.children}
 
       <style jsx global>{`
-
         @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
-        * { 
-          -moz-box-sizing: border-box; 
-          -webkit-box-sizing: border-box; 
-          box-sizing: border-box; 
+        * {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
         }
 
         body {
@@ -36,7 +35,7 @@ const Layout = props => {
         }
 
         p {
-          font-family: "Roboto", Arial, Helvetica, sans-serif;
+          font-family: 'Roboto', Arial, Helvetica, sans-serif;
           font-size: 16px;
           text-rendering: optimizeLegibility !important;
           -webkit-font-smoothing: antialiased !important;
@@ -47,9 +46,111 @@ const Layout = props => {
           text-decoration: none;
         }
 
+        .gridContainer {
+          display: grid;
+          grid-template-columns: repeat(11, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-column-gap: 20px;
+          grid-row-gap: 0px;
+          min-height: 100vh;
+          max-width: 1400px;
+          margin: auto;
+        }
+
+        .gridItem1 {
+          grid-area: 1 / 2 / 2 / 7;
+          align-self: end;
+        }
+
+        .gridItem2 {
+          grid-area: 2 / 2 / 3 / 5;
+          align-self: center;
+        }
+
+        .gridItem3 {
+          grid-area: 2 / 5 / 3 / 8;
+          align-self: center;
+        }
+
+        .gridItem4 {
+          grid-area: 2 / 8 / 3 / 11;
+          align-self: center;
+        }
+
+        .gridItem5 {
+          grid-area: 3 / 6 / auto / auto;
+          align-self: end;
+        }
+
+        .gridItem2,
+        .gridItem3,
+        .gridItem4 {
+          margin-top: 50px;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-size: 40px;
+          margin: 0 0 10px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: normal;
+        }
+
+        span {
+          background-color: #f8f8f8;
+          background-image: linear-gradient(to right, #f5e9eb 0%, #fffef6 100%);
+        }
+
+        p {
+          line-height: 1.5;
+        }
+
+        a {
+          display: inline-block;
+          color: #000;
+          position: relative;
+          text-decoration: underline;
+        }
+
+        a:hover:before {
+          height: 100%;
+          top: 0;
+        }
+
+        a:before {
+          position: absolute;
+          content: '';
+          top: 10px;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          opacity: 0.3;
+          background-image: linear-gradient(to right, #f3e9eb 0%, #fffef6 100%);
+        }
+
+        @media screen and (max-width: 768px) {
+          .gridContainer {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            margin: 25px;
+            min-height: auto;
+          }
+
+          .gridItem1,
+          .gridItem2,
+          .gridItem3,
+          .gridItem4,
+          .gridItem5 {
+            grid-column: auto;
+            grid-row: auto;
+          }
+        }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
