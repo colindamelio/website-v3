@@ -1,5 +1,5 @@
 import React from 'react';
-import App from 'next/App';
+import App from 'next/app';
 import Layout from '../Components/Layout';
 import { AnimatePresence } from 'framer-motion';
 
