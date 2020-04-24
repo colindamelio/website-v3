@@ -40,21 +40,7 @@ const Layout = (props) => {
           text-rendering: optimizeLegibility !important;
           -webkit-font-smoothing: antialiased !important;
           margin-bottom: 10px;
-        }
-
-        a {
-          text-decoration: none;
-        }
-
-        .gridContainer {
-          display: grid;
-          grid-template-columns: repeat(11, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          grid-column-gap: 20px;
-          grid-row-gap: 0px;
-          min-height: 100vh;
-          max-width: 1400px;
-          margin: auto;
+          line-height: 1.5;
         }
 
         .gridItem1 {
@@ -97,38 +83,6 @@ const Layout = (props) => {
         h2 {
           font-size: 20px;
           font-weight: normal;
-        }
-
-        span {
-          background-color: #f8f8f8;
-          background-image: linear-gradient(to right, #f5e9eb 0%, #fffef6 100%);
-        }
-
-        p {
-          line-height: 1.5;
-        }
-
-        a {
-          display: inline-block;
-          color: #000;
-          position: relative;
-          text-decoration: underline;
-        }
-
-        a:hover:before {
-          height: 100%;
-          top: 0;
-        }
-
-        a:before {
-          position: absolute;
-          content: '';
-          top: 10px;
-          left: 0;
-          width: 100%;
-          height: 50%;
-          opacity: 0.3;
-          background-image: linear-gradient(to right, #f3e9eb 0%, #fffef6 100%);
         }
 
         @media screen and (max-width: 768px) {

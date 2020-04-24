@@ -1,37 +1,29 @@
+import Link from 'next/link';
+
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { fadeIn, stagger } from '../motions';
 
-const easing = [0.48, 0.15, 0.25, 0.96];
+const HomeButton = styled.a`
+  width: 10px;
+  height: 25px;
+  border-radius: 3px;
+  background: #fff;
+  color: red;
+  box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+`;
 
-const fadeInUp = {
-  initial: {
-    x: 40,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: easing,
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-export default function () {
+const work = () => {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+      {/* <Link href="/" passHref>
+        <HomeButton>
+        </HomeButton>
+      </Link> */}
       <section>
-        <motion.h1 variants={fadeInUp}>Work</motion.h1>
+        <motion.h1 variants={fadeIn}>Work</motion.h1>
         <motion.ul variants={stagger}>
-          <motion.li variants={fadeInUp}>
+          <motion.li variants={fadeIn}>
             <div>
               <p>
                 <a href="https://www.honda.ca/buildyourhonda">
@@ -41,7 +33,7 @@ export default function () {
               </p>
             </div>
           </motion.li>
-          <motion.li variants={fadeInUp}>
+          <motion.li variants={fadeIn}>
             <div>
               <p>
                 <a href="https://www.honda.ca/dealerlocator">
@@ -51,7 +43,7 @@ export default function () {
               </p>
             </div>
           </motion.li>
-          <motion.li variants={fadeInUp}>
+          <motion.li variants={fadeIn}>
             <div>
               <p>
                 <a href="https://www.acura.ca">Acura Homepage</a> - Front-end
@@ -59,7 +51,7 @@ export default function () {
               </p>
             </div>
           </motion.li>
-          <motion.li variants={fadeInUp}>
+          <motion.li variants={fadeIn}>
             <div>
               <p>
                 <a href="https://www.saraswatibali.com">
@@ -97,4 +89,6 @@ export default function () {
       </section>
     </motion.div>
   );
-}
+};
+
+export default work;
