@@ -20,6 +20,11 @@ const Layout = (props) => {
           line-height: 1.3;
           color: #333;
           font-family: 'Montserrat', sans-serif;
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 0.65),
+              rgba(255, 255, 255, 0.85)
+            ),
+            url(./noise-texture.gif);
         }
 
         h1 {

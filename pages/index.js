@@ -38,22 +38,6 @@ const ExternalLink = styled.a`
   &:visited {
     color: #000;
   }
-
-  &:hover:before {
-    height: 100%;
-    top: 0;
-  }
-
-  &:before {
-    position: absolute;
-    content: '';
-    top: 10px;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    opacity: 0.4;
-    background-image: linear-gradient(to right, #f3e9eb 0%, #fffef6 100%);
-  }
 `;
 
 const index = () => {
