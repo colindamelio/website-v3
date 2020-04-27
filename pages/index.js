@@ -53,7 +53,7 @@ const index = () => {
             <h2>
               I am a{' '}
               <Highlighter>
-                front-end developer, instructor, and team lead
+                front-end developer, instructor, team lead, and curriculum writer
               </Highlighter>{' '}
               based in Toronto.
             </h2>
