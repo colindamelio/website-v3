@@ -40,20 +40,23 @@ const ExternalLink = styled.a`
   }
 `;
 
-const index = () => {
+const index = ({ title, siteDesc }) => {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Head>
-        <title>Colin D'Amelio - Web Developer & Instructor</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{siteDesc}</title>
       </Head>
       <Layout>
         <GridContainer>
           <motion.div variants={fadeIn} className="gridItem1">
-            <h1>Colin D'Amelio.</h1>
+            <h1>{title}</h1>
             <h2>
               I am a{' '}
               <Highlighter>
-                front-end developer, instructor, team lead, and curriculum writer
+                front-end developer, instructor, team lead, and curriculum
+                writer
               </Highlighter>{' '}
               based in Toronto.
             </h2>
@@ -113,3 +116,13 @@ const index = () => {
 };
 
 export default index;
+
+export async function getStaticProps() {
+  const configData = await import('../siteconfig.json');
+  return {
+    props: {
+      title: configData.title,
+      siteDesc: configData.description,
+    },
+  };
+}
