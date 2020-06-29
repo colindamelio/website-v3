@@ -44,6 +44,21 @@ const index = ({ title, siteDesc }) => {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-53454122-1"
+        />
+        <script
+          dangerouslySetInnerHTML=
+          {{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-53454122-1');
+            `,
+          }} />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{siteDesc}</title>
