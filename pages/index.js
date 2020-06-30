@@ -30,13 +30,26 @@ const Highlighter = styled.span`
 `;
 
 const ExternalLink = styled.a`
-  display: inline-block;
-  color: #00;
   position: relative;
-  text-decoration: underline;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  background: rgba(245, 233, 235, 0.7);
 
-  &:visited {
-    color: #000;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 1px;
+    background: #333;
+    transition: width 550ms ease;
+  }
+
+  &:hover:before {
+    width: 100%;
   }
 `;
 
@@ -82,7 +95,7 @@ const index = ({ title, siteDesc }) => {
               Working as a full-time FED, I have contributed to a variety of
               enterprise{' '}
               <Link href="work">
-                <a>projects</a>
+                <ExternalLink>projects</ExternalLink>
               </Link>{' '}
               throughout my career.
             </motion.p>
