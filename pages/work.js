@@ -11,7 +11,7 @@ const work = () => {
         <motion.ul variants={stagger}>
           {projects.map(work => {
             return (
-              <motion.li variants={fadeIn}>
+              <motion.li variants={fadeIn} key="id">
                 <div>
                   <p>
                     <a href={work.url}>
