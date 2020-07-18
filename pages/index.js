@@ -62,8 +62,7 @@ const index = ({ title, siteDesc }) => {
           src="https://www.googletagmanager.com/gtag/js?id=UA-53454122-1"
         />
         <script
-          dangerouslySetInnerHTML=
-          {{
+          dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -71,7 +70,8 @@ const index = ({ title, siteDesc }) => {
 
               gtag('config', 'UA-53454122-1');
             `,
-          }} />
+          }}
+        />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{siteDesc}</title>
@@ -105,11 +105,17 @@ const index = ({ title, siteDesc }) => {
             <motion.p variants={fadeIn}>
               You can read some of the tech education publications I have
               written for Juno College both{' '}
-              <ExternalLink href="https://junocollege.com/blog/react-destructuring-techniques">
+              <ExternalLink
+                href="https://junocollege.com/blog/react-destructuring-techniques"
+                rel="noopener noreferrer"
+                target="_blank">
                 here
               </ExternalLink>{' '}
               and{' '}
-              <ExternalLink href="https://junocollege.com/blog/exploring-state-management-in-react">
+              <ExternalLink
+                href="https://junocollege.com/blog/exploring-state-management-in-react"
+                rel="noopener noreferrer"
+                target="_blank">
                 here
               </ExternalLink>
               .
@@ -119,15 +125,24 @@ const index = ({ title, siteDesc }) => {
           <div className="gridItem4">
             <motion.p variants={fadeIn}>
               I encourage you to connect with me across{' '}
-              <ExternalLink href="https://github.com/colindamelio">
+              <ExternalLink
+                href="https://github.com/colindamelio"
+                rel="noopener noreferrer"
+                target="_blank">
                 GitHub
               </ExternalLink>
               ,{' '}
-              <ExternalLink href="https://twitter.com/clndml">
+              <ExternalLink
+                href="https://twitter.com/clndml"
+                rel="noopener noreferrer"
+                target="_blank">
                 Twitter
               </ExternalLink>
               , or{' '}
-              <ExternalLink href="https://www.linkedin.com/in/colindamelio/">
+              <ExternalLink
+                href="https://www.linkedin.com/in/colindamelio/"
+                rel="noopener noreferrer"
+                target="_blank">
                 LinkedIn
               </ExternalLink>
               .
