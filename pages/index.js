@@ -74,6 +74,14 @@ const index = ({ title, siteDesc }) => {
         />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Colin D'Amelio, Front End Development, Colin, D'Amelio, Toronto Developer, Juno College, Lead Instructor" />
+        <meta name="description" content="Colin D'Amelio | Front-end developer and Lead Instructor." />
+        <meta name="author" content="Colin D'Amelio" /> 
+        <meta property="og:title" content="Colin D'Amelio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://colindamelio.com" />
+        <meta property="og:site_name" content="Colin D'Amelio" />
+        <meta property="og:description" content="Colin D'Amelio | Front-end developer and Lead Instructor." />
         <title>{siteDesc}</title>
       </Head>
       <Layout>
