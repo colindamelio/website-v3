@@ -25,6 +25,20 @@ const Layout = (props) => {
               rgba(255, 255, 255, 0.85)
             ),
             url(./noise-texture.gif);
+          transition: background-color 0.3s ease;
+        }
+
+        .darkMode {
+          text-align: right;
+        }
+
+        button {
+          border: 0;
+          background: none;
+          padding: 5px;
+          height: 31px;
+          width: 31px;  
+          cursor: pointer;
         }
 
         h1 {
@@ -108,6 +122,25 @@ const Layout = (props) => {
             grid-row: auto;
           }
         }
+
+        body.dark-mode {
+          background-color: #10171d;
+          color: #dfdfdf;
+          background-image: none;
+        }
+
+        body.dark-mode a,
+        body.dark-mode span,
+        body.dark-mode .lightButton {
+          color: orange;
+          background: none;
+        }
+
+        body.light-mode .lightButton,
+        body.dark-mode .darkButton {
+          display: none;
+        }
+
       `}</style>
     </>
   );

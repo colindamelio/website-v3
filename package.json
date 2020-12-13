@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "framer-motion": "^1.10.3",
-    "next": "^9.4.4",
+    "next": "^10.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "use-dark-mode": "^2.3.1"
   }
 }

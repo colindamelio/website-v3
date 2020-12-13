@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../Components/Layout';
+import DarkModeToggle from '../Components/DarkModeToggle';
 
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -84,6 +85,7 @@ const index = ({ title, siteDesc }) => {
         <meta property="og:description" content="Colin D'Amelio | Front-end developer and Lead Instructor." />
         <title>{siteDesc}</title>
       </Head>
+      <DarkModeToggle />
       <Layout>
         <GridContainer>
           <motion.div variants={fadeIn} className="gridItem1">
